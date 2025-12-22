@@ -7,7 +7,7 @@ Usuario registrado
 
 ## CU-01 Registro de Usuario
 **Descripción:**
-El usuario se registra en la apliacación introduciendo sus datos personales.
+El usuario se registra en la aplicación introduciendo sus datos personales.
 
 **Actor:**
 Usuario registrado
@@ -16,7 +16,7 @@ Usuario registrado
 
 ## CU-02 Inicio de sesión
 **Descripción:**
-El usuario accede a la apliación mediante correo electrónico y contraseña
+El usuario accede a la aplicación mediante correo electrónico y contraseña
 
 **Actor:**
 Usuario registrado
