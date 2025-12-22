@@ -6,6 +6,7 @@ Usuario registrado
 ---
 
 ## CU-01 Registro de Usuario
+**Descripción:**
 El usuario se registra en la apliacación introduciendo sus datos personales.
 
 **Actor:**
@@ -41,6 +42,7 @@ Usuario registrado
 ---
 
 ## CU-05 Consultar historial
+**Descripción:**
 El usuario consulta el historial de entrenamientos realizados.
 
 **Actor:**
