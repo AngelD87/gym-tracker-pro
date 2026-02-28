@@ -1,0 +1,17 @@
+package com.dwes.ProyectoConMySQL.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+@Builder
+public class EntrenamientoEjercicioCompletoDTO {
+    private Long idEntrenamientoEjercicio;
+    private Long idEjercicio;
+    private String nombreEjercicio;
+    private Integer orden;
+    private String notas;
+    private List<SerieSimpleDTO> series;
+}
