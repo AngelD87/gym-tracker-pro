@@ -2,7 +2,7 @@
 
 Aplicación web para llevar el control de entrenamientos en el gimnasio.
 
-Proyecto Final de DAW - Curso 2024/2025
+Proyecto Final de DAW - Curso 2025/2026
 
 ## Estado actual
 
