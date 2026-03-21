@@ -33,9 +33,30 @@ public class UsuarioService {
 
     //CREAR USUARIO (DTO)
     public UsuarioResponseDTO crearUsuarioDesdeDTO(UsuarioCreateDTO dto) {
+
+        //VALIDACION: EMAIL duplicado
+        String email = dto.getEmail().trim().toLowerCase();
+        if(usuarioRepository.existsByEmail(email)) {
+            throw new IllegalArgumentException("El email ya está registrado");
+        }
+
+        //VALIDACION: Peso Corporal
+        if(dto.getPesoCorporal() != null) {
+            if(dto.getPesoCorporal() < 30 || dto.getPesoCorporal() > 300) {
+                throw new IllegalArgumentException("El peso debe estar entre 30 y 300kg");
+            }
+        }
+
+        //VALIDACION: altura
+        if(dto.getAltura() != null) {
+            if(dto.getAltura() < 1.0 || dto.getAltura() > 3.0) {
+                throw new IllegalArgumentException("La altura debe estar entre 1 y 3 metros");
+            }
+        }
+
         Usuario usuario = new Usuario();
         usuario.setNombre(dto.getNombre());
-        usuario.setEmail(dto.getEmail());
+        usuario.setEmail(email);
         usuario.setPasswordHash(dto.getPassword());
         usuario.setPesoCorporal(dto.getPesoCorporal());
         usuario.setAltura(dto.getAltura());

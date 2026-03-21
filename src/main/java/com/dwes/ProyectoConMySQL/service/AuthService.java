@@ -15,14 +15,19 @@ public class AuthService {
     }
 
     public LoginResponseDTO login(LoginRequestDTO dto) {
-        Usuario usuario = usuarioRepository.findByEmail(dto.getEmail())
+
+        String email = dto.getEmail().trim().toLowerCase();
+        //BUSCAR USUARIO POR EMAIL
+        Usuario usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() ->
                         new IllegalArgumentException("Email o contraseña incorrectos"));
 
+        //VERIFICAR CONTRASEÑA
         if (!usuario.getPasswordHash().equals(dto.getPassword())) {
             throw new IllegalArgumentException("Email o contraseña incorrectos");
         }
 
+        //QUE ESTE ACTIVO
         if (!usuario.getIsActive()) {
             throw new IllegalStateException("Usuario desactivado");
         }
