@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTracker - Registro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="contenedor-login">
+        <section class="tarjeta-login">
+            <h1>GymTracker</h1>
+            <p class="subtitulo-login">Crea tu cuenta</p>
+
+            <form id="formRegistro">
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Introduce tu nombre" required> 
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="correo">Correo Electronico</label>
+                    <input type="email" id="correo" placeholder="Introduce tu correo" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" placeholder="Introduce tu contraseña" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="pesoCorporal">Peso Corporal (kg)</label>
+                    <input type="number" id="pesoCorporal" placeholder="Ejemplo: 80" step="0.1">
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="altura">Altura (m)</label>
+                    <input type="number" id="altura" placeholder="Ejemplo: 1.80" step="0.01">
+                </div>
+
+                <button type="submit">Crear cuenta</button>
+            </form>
+
+            <p id="mensajeRegistro" class="mensaje-login"></p>
+
+            
+            <div class="enlaces-login">
+            <p>¿Ya tienes cuenta?</p>  
+            <a class="parrafoCrear" href="index.html">Iniciar sesión</a>
+            </div>
+            
+        </section>
+
+        <p class="mensajeMotivador">Transforma tu cuerpo, supera tus límites</p>
+    </main>
+
+    <script type="module" src="js/pages/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTracker - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header class="header-principal">
+        <div class="logo-header">GymTracker</div>
+        <button id="btnCerrarSesion" class="boton-salir">Salir</button>
+    </header>
+
+    <main class="contenido-dashboard">
+
+        <section class="tarjeta-dashboard tarjeta-bienvenida">
+            <h1 id="saludoUsuario">Usuari@</h1>
+            <p>Bienvenid@ de nuevo a tu zona de entrenamiento</p>
+        </section>
+
+        <section class="tarjeta-dashboard tarjeta-accion">
+            <h2>¿Listo para entrenar?</h2>
+            <button id="btnNuevoEntrenamiento" class="boton-principal">
+                Nuevo Entrenamiento
+            </button>
+        </section>
+
+        <section class="tarjeta-dashboard tarjeta-secciones">
+            <h2>Tus secciones</h2>
+
+            <div class="grid-secciones">
+                <a href="pages/entrenamientos.html" class="tarjeta-seccion">
+                    <img src="images/icons/entrenamientos.png" alt="Entrenamientos" class="icono-seccion">
+                    <span class="texto-seccion">Entrenamientos</span>
+                </a>
+
+                <a href="pages/ejercicios.html" class="tarjeta-seccion">
+                    <img src="images/icons/ejercicios.png" alt="Ejercicios" class="icono-seccion">
+                    <span class="texto-seccion">Ejercicios</span>
+                </a>
+
+                <a href="pages/perfil.html" class="tarjeta-seccion">
+                    <img src="images/icons/perfil.png" alt="Perfil" class="icono-seccion">
+                    <span class="texto-seccion">Perfil</span>
+                </a>
+
+                <a href="#" class="tarjeta-seccion">
+                    <img src="images/icons/tienda.png" alt="Tienda" class="icono-seccion">
+                    <span class="texto-seccion">Tienda</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="tarjeta-dashboard tarjeta-resumen">
+            <h2>Estadísticas</h2>
+            <p id="textoResumen">Aquí veremos las estadísticas y progreso</p>
+        </section>
+
+        <section id="zonaAdmin" class="tarjeta-dashboard tarjeta-admin oculto">
+            <h2>Panel de administración</h2>
+            <a href="pages/admin/usuarios.html" class="boton-admin">
+                <img src="images/icons/admin.png" alt="Admin" class="icono-boton-admin">
+                <span>Gestionar usuarios</span>
+            </a>
+        </section>
+
+    </main>
+
+    <nav class="nav-inferior">
+        <a href="dashboard.html" class="item-nav activo">
+            <img src="images/icons/inicio.png" alt="Inicio" class="icono-nav">
+            <span>Inicio</span>
+        </a>
+
+        <a href="pages/ejercicios.html" class="item-nav">
+            <img src="images/icons/nav-ejercicios.png" alt="Ejercicios" class="icono-nav">
+            <span>Ejercicios</span>
+        </a>
+
+        <a href="pages/entrenamientos.html" class="item-nav">
+            <img src="images/icons/nav-entrenos.png" alt="Entrenos" class="icono-nav">
+            <span>Entrenos</span>
+        </a>
+
+        <a href="pages/perfil.html" class="item-nav">
+            <img src="images/icons/nav-perfil.png" alt="Perfil" class="icono-nav">
+            <span>Perfil</span>
+        </a>
+    </nav>
+
+    <script type="module" src="js/pages/dashboard.js"></script>
+
+</body>
+</html>

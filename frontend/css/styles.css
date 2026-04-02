@@ -1,0 +1,337 @@
+/* =========================
+   LOGIN - REGISTER
+========================= */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.contenedor-login{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tarjeta-login{
+    width: 100%;
+    max-width: 400px;
+    background-color: rgb(97, 79, 79);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgb(0, 0, 0, 0.08);
+
+}
+
+
+.tarjeta-login h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.subtitulo-login{
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-style: italic;
+}
+
+.grupo-formulario {
+    margin-bottom: 16px;
+}
+
+.grupo-formulario label{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(209, 17, 17);
+}
+
+
+.mensaje-login{
+    min-height: 20px;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.enlaces-login {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.enlaces-login a {
+    text-decoration: none;
+    color: #ef4444;
+    font-weight: 600;
+    text-decoration: none; 
+    transition: color 0.2s ease;
+}
+
+
+.parrafoCrear:hover {
+    color: #f87171; 
+}
+
+.mensajeMotivador {
+    text-align: center;
+    margin-top: 16px;
+    color: gray;
+    font-style: italic;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.header-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid rgb(97, 79, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    z-index: 1000;
+}
+
+.logo-header {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.boton-salir {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto;
+}
+
+.boton-salir:hover {
+    background-color: rgb(209, 17, 17);
+}
+
+.contenido-dashboard {
+    min-height: 100vh;
+    padding: 90px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.tarjeta-dashboard {
+    width: 100%;
+    background-color: rgb(97, 79, 79);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-dashboard h1,
+.tarjeta-dashboard h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.tarjeta-dashboard p {
+    color: #d1d5db;
+    line-height: 1.4;
+}
+
+.tarjeta-accion {
+    text-align: center;
+}
+
+.boton-principal {
+    width: 100%;
+    padding: 14px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.boton-principal:hover {
+    background-color: rgb(209, 17, 17);
+}
+
+.grid-secciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.tarjeta-seccion {
+    background-color: black;
+    border: 1px solid #444;
+    border-radius: 14px;
+    padding: 18px 12px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 130px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-seccion:hover {
+    transform: translateY(-2px);
+    border-color: red;
+}
+
+.icono-seccion {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.texto-seccion {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.tarjeta-admin {
+    border: 1px solid red;
+}
+
+.boton-admin {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.boton-admin:hover {
+    background-color: rgb(209, 17, 17);
+}
+
+.icono-boton-admin {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.oculto {
+    display: none;
+}
+
+/* =========================
+   NAVEGACIÓN INFERIOR
+========================= */
+
+.icono-nav {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.icono-nav:hover {
+    transform: translateY(-2px);
+}
+
+.nav-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    border-top: 1px solid rgb(97, 79, 79);
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.item-nav {
+    flex: 1;
+    text-decoration: none;
+    color: #d1d5db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    gap: 4px;
+    position: relative;
+
+}
+
+.item-nav span {
+    font-size: 0.75rem;
+    
+}
+
+.item-nav.activo {
+    color: red;
+    font-weight: bold;
+}
+
+.item-nav:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 1px;
+    height: 60%;
+    background-color: rgb(97, 79, 79);
+}
