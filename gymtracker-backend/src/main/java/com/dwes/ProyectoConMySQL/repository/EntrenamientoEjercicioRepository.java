@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface EntrenamientoEjercicioRepository extends JpaRepository<EntrenamientoEjercicio, Long> {
     List<EntrenamientoEjercicio> findByEntrenamientoIdEntrenamientoOrderByOrden(Long idEntrenamiento);
+
 }

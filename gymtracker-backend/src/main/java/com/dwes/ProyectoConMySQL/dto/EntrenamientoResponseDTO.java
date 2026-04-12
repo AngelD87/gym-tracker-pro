@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 public class EntrenamientoResponseDTO {
     private Long idEntrenamiento;
     private Long idUsuario;
+    private String nombre;
     private LocalDateTime inicio;
     private LocalDateTime fin;
     private Integer valoracion;

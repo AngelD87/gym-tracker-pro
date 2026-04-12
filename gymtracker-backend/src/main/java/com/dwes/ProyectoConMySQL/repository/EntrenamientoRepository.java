@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface EntrenamientoRepository extends JpaRepository<Entrenamiento, Long> {
     List<Entrenamiento> findByUsuarioIdUsuario(Long idUsuario);
+    boolean existsByUsuarioIdUsuarioAndNombreIgnoreCase(Long idUsuario, String nombre);
+
 }

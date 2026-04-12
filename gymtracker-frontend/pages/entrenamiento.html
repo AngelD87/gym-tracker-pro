@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTracker Entrenamiento</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="logo-header">GymTracker</div>
+        <button id="btnVolverDashboard" class="boton-salir">Volver</button>
+    </header>
+
+    <main class="contenido-dashboard">
+        <section class="tarjeta-dashboard">
+            <h1 id="tituloEntrenamiento">Entrenamiento</h1>
+            <p id="infoEntrenamiento">Cargando entrenamiento...</p>
+        </section>
+
+        <section class="tarjeta-dashboard tarjeta-accion">
+            <h2>Gestiona tu entrenamiento</h2>
+            <button id="btnAñadirEjercicio" class="boton-principal">Añadir Ejercicio</button>
+        </section>
+
+        <section class="tarjeta-dashboard">
+            <h2>Ejercicios del entrenamiento</h2>
+            <div id="listaEjerciciosEntrenamiento">
+                <p>No hay ejercicios añadidos todavía</p>
+            </div>
+        </section>
+
+        <section class="tarjeta-dashboard tarjeta-accion">
+            <h2>Finalizar Sesión</h2>
+            <button id="btnCerrarEntrenamiento" class="boton-principal">Cerrar Entrenamiento</button>
+        </section>
+
+    </main>
+
+    <nav class="nav-inferior">
+        <a href="../dashboard.html" class="item-nav">
+            <img src="../images/icons/inicio.png" alt="Inicio" class="icono-nav">
+            <span>Inicio</span>
+        </a>
+
+        <a href="ejercicios.html" class="item-nav">
+            <img src="../images/icons/nav-ejercicios.png" alt="Ejercicios" class="icono-nav">
+            <span>Ejercicios</span>
+        </a>
+
+        <a href="entrenamientos.html" class="item-nav activo">
+            <img src="../images/icons/nav-entrenos.png" alt="Entrenos" class="icono-nav">
+            <span>Entrenos</span>
+        </a>
+
+        <a href="perfil.html" class="item-nav">
+            <img src="../images/icons/nav-perfil.png" alt="Perfil" class="icono-nav">
+            <span>Perfil</span>
+        </a>
+    </nav>
+
+    <script type="module" src="../js/pages/entrenamiento.js"></script>
+</body>
+</html>

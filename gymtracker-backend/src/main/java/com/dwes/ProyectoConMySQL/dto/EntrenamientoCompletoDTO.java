@@ -10,6 +10,7 @@ import java.util.List;
 @Builder
 public class EntrenamientoCompletoDTO {
     private Long idEntrenamiento;
+    private String nombre;
     private LocalDateTime inicio;
     private LocalDateTime fin;
     private Integer valoracion;

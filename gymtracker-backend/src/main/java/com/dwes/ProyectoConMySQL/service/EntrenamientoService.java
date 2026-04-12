@@ -36,6 +36,7 @@ public class EntrenamientoService {
         return EntrenamientoResponseDTO.builder()
                 .idEntrenamiento(e.getIdEntrenamiento())
                 .idUsuario(e.getUsuario().getIdUsuario())
+                .nombre(e.getNombre())
                 .inicio(e.getInicio())
                 .fin(e.getFin())
                 .valoracion(e.getValoracion())
@@ -49,8 +50,19 @@ public class EntrenamientoService {
                 .orElseThrow(() ->
                         new IllegalArgumentException("El usuario no existe"));
 
+        if(dto.getNombre() == null || dto.getNombre().trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre del entrenamiento es obligatorio");
+        }
+
+        String nombreLimpio = dto.getNombre().trim();
+
+        if (entrenamientoRepository.existsByUsuarioIdUsuarioAndNombreIgnoreCase(dto.getIdUsuario(), nombreLimpio)) {
+            throw new IllegalArgumentException("Ya tienes un entrenamiento con ese nombre");
+        }
+
         Entrenamiento entrenamiento = new Entrenamiento();
         entrenamiento.setUsuario(usuario);
+        entrenamiento.setNombre(nombreLimpio);
         entrenamiento.setInicio(LocalDateTime.now());
 
         Entrenamiento guardado = entrenamientoRepository.save(entrenamiento);
@@ -149,6 +161,7 @@ public class EntrenamientoService {
 
         return EntrenamientoCompletoDTO.builder()
                 .idEntrenamiento(entrenamiento.getIdEntrenamiento())
+                .nombre(entrenamiento.getNombre())
                 .inicio(entrenamiento.getInicio())
                 .fin(entrenamiento.getFin())
                 .valoracion(entrenamiento.getValoracion())

@@ -19,6 +19,9 @@ public class Entrenamiento {
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
+    @Column(nullable = false, length = 100)
+    private String nombre;
+
     @Column(nullable = false)
     private LocalDateTime inicio;
 

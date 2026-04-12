@@ -18,8 +18,8 @@
     <main class="contenido-dashboard">
 
         <section class="tarjeta-dashboard tarjeta-bienvenida">
-            <h1 id="saludoUsuario">Usuari@</h1>
-            <p>Bienvenid@ de nuevo a tu zona de entrenamiento</p>
+            <h1 id="saludoUsuario">Bienvenid@</h1>
+            <p>Tu mejor versión empieza hoy</p>
         </section>
 
         <section class="tarjeta-dashboard tarjeta-accion">
@@ -91,6 +91,22 @@
             <span>Perfil</span>
         </a>
     </nav>
+
+    <!--VENTANA MODAL-->
+    <div id="modalEntrenamiento" class="modal oculto">
+        <div class="modal-contenido">
+            <h2>Nuevo Entrenamiento</h2>
+
+            <input type="text" id="inputNombreEntrenamiento" placeholder="Ej: Push, Pierna...">
+
+            <div class="modal-botones">
+                <button id="btnCancelarModal" class="boton-modal boton-modal-cancelar">Cancelar</button>
+                <button id="btnCrearEntrenamiento" class="boton-modal boton-modal-crear">Crear</button>
+            </div>
+
+            <p id="mensajeModal" class="mensaje-login"></p>
+        </div>
+    </div>
 
     <script type="module" src="js/pages/dashboard.js"></script>
 

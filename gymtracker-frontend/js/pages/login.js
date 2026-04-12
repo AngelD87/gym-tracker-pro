@@ -22,7 +22,7 @@ formLogin.addEventListener("submit", async function (evento) {
         mensajeLogin.style.color = "green";
 
         setTimeout(() => {
-            window.location.href = "dasboard.html";
+            window.location.href = "dashboard.html";
             
         }, 1000);
 
