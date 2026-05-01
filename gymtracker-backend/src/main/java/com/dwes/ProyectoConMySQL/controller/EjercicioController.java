@@ -31,6 +31,13 @@ public class EjercicioController {
         return ResponseEntity.ok(ejercicioService.listarDTO());
     }
 
+    //LISTAR POR MUSCULO
+    @GetMapping("/musculo/{idMusculo}")
+    public ResponseEntity<List<EjercicioResponseDTO>> listarPorMusculo(@PathVariable Long idMusculo) {
+        return ResponseEntity.ok(ejercicioService.listarPorMusculoDTO(idMusculo));
+    }
+
+
     //BUSCAR POR ID
     @GetMapping("/{id}")
     public ResponseEntity<EjercicioResponseDTO> buscarPorId(@PathVariable Long id) {

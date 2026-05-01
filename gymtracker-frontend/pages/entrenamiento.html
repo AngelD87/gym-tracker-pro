@@ -61,6 +61,57 @@
         </a>
     </nav>
 
+    <!-- MODAL AÑADIR EJERCICIO -->
+    <div id="modalEjercicio" class="modal oculto">
+        <div class="modal-contenido">
+            <h2>Añadir Ejercicio</h2>
+
+        <!--SELECCIONAR MUSCULO-->
+        <div class="grupo-formulario">
+            <label for="selectMusculo">Grupo muscular</label>
+            <select id="selectMusculo" class="input-modal">
+                <option value="">Selecciona un músculo</option>
+            </select>
+        </div>
+
+        <!--SELECCIONAR EJERCICIO-->
+            <div class="grupo-formulario">
+                <label for="selectEjercicio">Ejercicio</label>
+                <select id="selectEjercicio" class="input-modal">
+                    <option value="">Selecciona un ejercicio</option>
+                </select>
+            </div>
+
+            <!--INFO EJERCICIO-->
+            <div id="infoEjercicio" class="tarjeta-ejercicio oculto">
+                <h3 id="nombreEjercicioInfo"></h3>
+                <p id="descripcionEjercicioInfo"></p>
+
+                <button id="btnVerVideo" class="boton-principal">Ver vídeo</button>
+            </div>
+
+            
+            <!--ORDEN-->
+            <div class="grupo-formulario">
+                <label for="ordenEjercicio">Orden</label>
+                <input type="number" id="ordenEjercicio" class="input-modal" placeholder="Ej: 1" min="1">
+            </div>
+
+            <!--NOTAS-->
+            <div class="grupo-formulario">
+                <label for="notasEjercicio">Notas</label>
+                <textarea id="notasEjercicio" class="input-modal textarea-modal" placeholder="Opcional"></textarea>
+            </div>
+
+            <div class="modal-botones">
+                <button id="btnCancelarEjercicio" class="boton-modal boton-modal-cancelar">Cancelar</button>
+                <button id="btnGuardarEjercicio" class="boton-modal boton-modal-crear">Guardar</button>
+            </div>
+
+            <p id="mensajeModalEjercicio" class="mensaje-login"></p>
+        </div>
+    </div>
+
     <script type="module" src="../js/pages/entrenamiento.js"></script>
 </body>
 </html>

@@ -120,6 +120,14 @@ public class EjercicioService {
         return toResponseDTO(actualizado);
     }
 
+    //LISTAR POR MUSCULO (DTO)
+    public List<EjercicioResponseDTO> listarPorMusculoDTO(Long idMusculo) {
+        return ejercicioRepository.findByMusculoIdMusculo(idMusculo)
+                .stream()
+                .map(this::toResponseDTO)
+                .toList();
+    }
+
     //ELIMINAR
     public void eliminar(Long id) {
         Ejercicio e = ejercicioRepository.findById(id)
