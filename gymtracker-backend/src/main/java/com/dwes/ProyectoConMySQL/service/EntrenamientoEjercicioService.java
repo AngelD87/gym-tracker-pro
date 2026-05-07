@@ -61,6 +61,17 @@ public class EntrenamientoEjercicioService {
             throw new IllegalArgumentException("El orden debe ser mayor que 0");
         }
 
+        //VALIDACIÓN: NO PERMITIR EL MISMO ORDEN
+        boolean existeOrden =
+                entrenamientoEjercicioRepository.existsByEntrenamientoIdEntrenamientoAndOrden(
+                        dto.getIdEntrenamiento(),
+                        dto.getOrden()
+                );
+
+        if (existeOrden) {
+            throw new IllegalArgumentException("Ya existe un ejercicio con ese orden en este entrenamiento");
+        }
+
         EntrenamientoEjercicio ee = new EntrenamientoEjercicio();
         ee.setEntrenamiento(entrenamiento);
         ee.setEjercicio(ejercicio);

@@ -149,6 +149,7 @@ public class EntrenamientoService {
                                                 ee.getIdEntrenamientoEjercicio())
                                         .stream()
                                         .map(s -> SerieSimpleDTO.builder()
+                                                .idSerie(s.getIdSerie())
                                                 .numeroSerie(s.getNumeroSerie())
                                                 .repeticiones(s.getRepeticiones())
                                                 .peso(s.getPeso())

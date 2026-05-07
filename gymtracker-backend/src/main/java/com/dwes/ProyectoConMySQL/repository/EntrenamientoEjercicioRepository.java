@@ -10,4 +10,5 @@ import java.util.List;
 public interface EntrenamientoEjercicioRepository extends JpaRepository<EntrenamientoEjercicio, Long> {
     List<EntrenamientoEjercicio> findByEntrenamientoIdEntrenamientoOrderByOrden(Long idEntrenamiento);
 
+    boolean existsByEntrenamientoIdEntrenamientoAndOrden(Long idEntrenamiento, Integer orden);
 }
