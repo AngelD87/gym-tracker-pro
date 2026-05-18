@@ -14,7 +14,7 @@ Entrar en la carpeta del backend:
 cd gymtracker-backend
 ```
 
-Ejecutar Spring Boot:º
+Ejecutar Spring Boot:
 
 ```bash
 mvnw.cmd spring-boot:run
@@ -35,3 +35,5 @@ Abrir el archivo:
 ```bash
 index.html
 ```
+
+Hola
