@@ -19,3 +19,7 @@ Trabajando en el backend. Todavía en desarrollo.
 ## Autor
 
 Ángel David
+
+## Actualización
+
+Repositorio utilizado para la práctica de Git.
