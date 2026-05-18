@@ -36,4 +36,4 @@ Abrir el archivo:
 index.html
 ```
 
-Hola
+Adios
